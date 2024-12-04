@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
     print("Loading modeling from %s" % opt.ckpt)
     
-    device = torch.device(opt.device) if torch.cuda.is_available() and opt.device is not "cpu" else torch.device("cpu")
+    device = torch.device(opt.device) if torch.cuda.is_available() and opt.device != "cpu" else torch.device("cpu")
     
     model = model.to(device)
 
